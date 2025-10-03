@@ -27,7 +27,7 @@ This repository contains a collection of data visualization tools and interactiv
 
 ### Prerequisites
 - Python 3.8 or higher
-- pip (Python package installer)
+- uv (Ultra-fast Python package installer and resolver)
 
 ### Installation & Running Commands
 
@@ -36,30 +36,15 @@ This repository contains a collection of data visualization tools and interactiv
    cd app
    ```
 
-2. **Install the required dependencies:**
+2. **Run the Streamlit application with uv:**
    ```bash
-   pip install -r requirements.txt
+   uv run streamlit run app.py
    ```
    
-   Or if you prefer using a virtual environment (recommended):
-   ```bash
-   # Create virtual environment
-   python -m venv venv
-   
-   # Activate virtual environment
-   # On Linux/Mac:
-   source venv/bin/activate
-   # On Windows:
-   # venv\Scripts\activate
-   
-   # Install dependencies
-   pip install -r requirements.txt
-   ```
-
-3. **Run the Streamlit application:**
-   ```bash
-   streamlit run app.py
-   ```
+   uv will automatically:
+   - Create a virtual environment if needed
+   - Install all dependencies from requirements.txt
+   - Run the Streamlit application
 
 4. **Access the application:**
    - The app will automatically open in your default browser
@@ -70,17 +55,17 @@ This repository contains a collection of data visualization tools and interactiv
 
 - **Run with specific port:**
   ```bash
-  streamlit run app.py --server.port 8502
+  uv run streamlit run app.py --server.port 8502
   ```
 
 - **Run with custom host:**
   ```bash
-  streamlit run app.py --server.address 0.0.0.0
+  uv run streamlit run app.py --server.address 0.0.0.0
   ```
 
 - **Run in headless mode (no browser auto-open):**
   ```bash
-  streamlit run app.py --server.headless true
+  uv run streamlit run app.py --server.headless true
   ```
 
 ### Stopping the Application
