@@ -1,0 +1,16 @@
+[project]
+name = "streamlit-app"
+version = "0.1.0"
+description = "A basic Streamlit application with data visualization features"
+requires-python = ">=3.8"
+dependencies = [
+    "streamlit>=1.28.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "scipy>=1.10.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]

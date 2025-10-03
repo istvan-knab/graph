@@ -36,14 +36,20 @@ This repository contains a collection of data visualization tools and interactiv
    cd app
    ```
 
-2. **Run the Streamlit application with uv:**
+2. **Install dependencies and run the Streamlit application:**
    ```bash
+   uv sync
    uv run streamlit run app.py
+   ```
+   
+   Or run it in one command:
+   ```bash
+   uv run --with streamlit streamlit run app.py
    ```
    
    uv will automatically:
    - Create a virtual environment if needed
-   - Install all dependencies from requirements.txt
+   - Install all dependencies from pyproject.toml
    - Run the Streamlit application
 
 4. **Access the application:**
@@ -66,6 +72,11 @@ This repository contains a collection of data visualization tools and interactiv
 - **Run in headless mode (no browser auto-open):**
   ```bash
   uv run streamlit run app.py --server.headless true
+  ```
+
+- **One-time install and run (without sync):**
+  ```bash
+  uv run --with streamlit streamlit run app.py
   ```
 
 ### Stopping the Application
